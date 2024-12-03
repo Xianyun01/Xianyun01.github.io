@@ -34,11 +34,25 @@ ul
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
+    position: fixed;
     left: 270px;
+    padding: 0 30px;
     top: 0;
     right: 0;
     z-index: 0;
     opacity: 1;
+}
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container
+{
+    max-width: 1100px;
+    width: 100%;
+    background: red;
+    margin: auto;
 }
 /*aside*/
 .aside
@@ -166,4 +180,10 @@ ul
 .aside .nav li a i
 {
     margin-right: 15px;
+}
+/* home */
+.home .home-img img
+{
+    height: 400px;
+
 }
