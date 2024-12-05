@@ -34,24 +34,17 @@ ul
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-<<<<<<< HEAD
-<<<<<<< Updated upstream
     padding: 0 30px;
-=======
     position: fixed;
     left: 270px;
     top: 0;
     right: 0;
     z-index: 0;
->>>>>>> Stashed changes
-=======
     position: fixed;
     left: 270px;
     padding: 0 30px;
     top: 0;
-    right: 0;
-    z-index: 0;
->>>>>>> parent of ba7ce54 (change)
+    right: 0;    z-index: 0;
     opacity: 1;
 }
 .padd-15
