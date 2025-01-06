@@ -527,7 +527,7 @@ h3.my-profession
     color: var(--text-black-700);
 }
 /*Service*/
-,.service .container
+.service .container
 {
     padding-bottom: 40px;
 }
