@@ -145,11 +145,18 @@ ul
     padding: 12px 35px;
     color: white;
     border-radius: 40px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     white-space: nowrap;
     border: none;
     background: var(--skin-color);
     transition: all 0.3s ease;
+}
+.btn img.btn-logo
+{
+    width: 40px;   
+    height: 40px;  
 }
 .btn:hover
 {
@@ -313,6 +320,11 @@ ul
 {
     flex: 0 0 60%;
     max-width: 60%;
+}
+.custom-text
+{
+    color: var(--skin-color);
+    font-weight: bold;
 }
 h3.hello
 {
