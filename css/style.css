@@ -37,6 +37,7 @@ ul
 {
     list-style: none;
 }
+section.home{z-index:1;}
 .section
 {
     background: var(--bg-black-900);
@@ -850,4 +851,3 @@ h3.my-profession
         max-width: 100%;
     }
 }
-section.home{z-index:1;}

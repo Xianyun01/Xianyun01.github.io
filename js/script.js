@@ -16,6 +16,7 @@ const nav = document.querySelector(".nav"),
         const a = navList[i].querySelector("a");
         a.addEventListener("click", function()
         {
+            if (this.classList.contains("active")) return;
             removeBackSection();
             for(let j = 0; j<totalNavList; j++)
             {
@@ -53,6 +54,7 @@ const nav = document.querySelector(".nav"),
         }
         const target = element.getAttribute("href").split("#")[1];
         document.querySelector("#" + target).classList.add("active");
+        history.pushState(null, null, "#" + target); // URL 해시 업데이트
     }
     function updateNav(element)
     {
@@ -70,9 +72,12 @@ const nav = document.querySelector(".nav"),
     {
         const sectionIndex = this.getAttribute("data-section-index");
         //console.log(sectionIndex);
+
+        removeBackSection();
+
         showSection(this);
         updateNav(this);
-        removeBackSection();
+        
         addBackSection(sectionIndex);
     })
     const navTogglerBtn = document.querySelector(".nav-toggler"),
@@ -90,3 +95,19 @@ const nav = document.querySelector(".nav"),
                 allSection[i].classList.toggle("open");
             }
         }
+
+        window.addEventListener("load", () => {
+            const hash = window.location.hash; // 현재 URL의 해시 값 가져오기
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    // 모든 섹션 초기화
+                    allSection.forEach(section => section.classList.remove("active"));
+                    // 해시 섹션 활성화
+                    target.classList.add("active");
+        
+                    // 네비게이션도 업데이트
+                    updateNav(document.querySelector(`a[href="${hash}"]`));
+                }
+            }
+        });
