@@ -6,10 +6,12 @@ var typed = new Typed(".typing",{
     loop:true
 })
 /* ============================================== Aside ============================================== */
-const nav = document.querySelector(".nav"),
-    navList = nav.querySelectorAll("li"),
-    totalNavList = navList.length,
-    allSection = document.querySelectorAll(".section"),
+const nav = document.querySelector(".nav"), //1. 클래스 nav로 접근
+    navList = nav.querySelectorAll("li"),   //2. nav클래스 안의 li 클래스를 모두 NodeList로 반환
+    totalNavList = navList.length,  //3. li클래스들이 있는 NodeList의 요소 개수로 totalNavList 확인
+    allSection = document.querySelectorAll(".section"), //4. section클래스를 모두 NodeList로 반환
+        /*allSection은 모든 섹션을 NodeList화한다. li클래스랑은 별개로 움직인다. 
+        ==> (2,3)이 시점에서 li 클래스와 section 클래스의 순서는 완전히 일치해야 한다. */
     totalSection = allSection.length;
     for(let i = 0; i<totalNavList; i++)
     {
@@ -111,3 +113,7 @@ const nav = document.querySelector(".nav"),
                 }
             }
         });
+
+
+
+/* ============================================== hash reset ============================================== */
